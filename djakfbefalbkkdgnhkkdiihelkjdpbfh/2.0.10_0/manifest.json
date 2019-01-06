@@ -1,0 +1,31 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "event.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/transparent.png",
+      "default_title": "Chrome Version"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "jquery-2.1.4.min.js", "content_script.js" ],
+      "matches": ["*://csprod.dsc.umich.edu/*" ],
+      "run_at": "document_end"
+   } ],
+   "icons": {
+      "128": "images/transparent.png",
+      "48": "images/transparent.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0v+fJ8E+/S1MAgYuVXcL41pBwbL8IkGen/PLnuJNxvYdr7MzvBjizeo75Yj0A5TJ0lVizvuG/vy7lOMtBG4b3RWjNYvPlV1RNKeRy4zOvgfIpojIcXEEb0i61Ns8nXZ2uZGF5oEpXzU5Xl1t+ZoIUPVlMw2Uf+czHkoSKYkUNK/YtG1j+HmhtdWz80hYjY+El60Z+jL1/OTEwQjiWN6RO+d/3PgU9nth289pyAJLiULGmvsKhHgG4ZawknB7N7dVVrXJtn/HlbSli3oDl91KNY7GfHyeS1yTfsXod7aLsMq9IUYAhsHc4h624Qizxm4uJsBLyvNB/0g7bfJAC1Yg/wIDAQAB",
+   "manifest_version": 2,
+   "name": "Chrome Version",
+   "options_page": "options.html",
+   "options_ui": {
+      "page": "options.html"
+   },
+   "permissions": [ "storage" ],
+   "short_name": "Chrome Version",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.10"
+}

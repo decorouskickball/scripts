@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="options.css">
+	<title>Word Replacer II</title>
+</head>
+
+<body>			
+
+
+	<div id="l_col">
+		<ol class="ol_rep" id="ol_dict">
+		<center style="position: relative; left: -20px"><a href="#" id="a_addnew" class="active">New</a> / <a href="#" id="a_enableselected" class="active">Enable</a> / <a href="#" id="a_disableselected" class="active">Disable</a> / <a href="#" id="a_removeselected" class="active">Delete selected</a> / <a href="#" id="a_removeeverything" class="active" style="color: #cc0000">Delete everything</a></center><br>
+		<input type="checkbox" id="c_selectall" style="position: relative; left: calc(100% - 38px); bottom: 30px;">
+		</ol>
+		
+		<div id="pageContainer">
+			<div id="pageSelector" style="display: none">
+				<input id="n_pageselector" type="number" min="1" max="1" step="1" value="1">
+				<input id="btn_pageselector" type="button" value="Go">
+			</div>
+			<center style="position: relative; top: 20px">
+				<a href="#" id="a_firstpage">&lt;&lt;</a>&nbsp;
+				<a href="#" id="a_prevpage">&lt;</a>&nbsp;
+				<a href="#" id="a_pageselector" class="active">Page 1 of 1</a>&nbsp;
+				<a href="#" id="a_nextpage">&gt;</a>&nbsp;
+				<a href="#" id="a_lastpage">&gt;&gt;</a>
+			</center>
+		</div>
+
+	</div>
+	<div id="r_col">
+		<center style="margin-top: 14px"><a href="#" id="a_help" class="active">User manual</a> / <a href="#" id="a_about" class="active">About WR II</a> / <a href="#" id="a_changelog" class="active">Changelog</a> / <a href="https://www.reddit.com/r/wordreplacer" id="a_official_lists" class="active">Official community</a> / <a href="#" id="a_donate" class="active">Donate</a></center>
+		<h1>Replacement Settings</h1><br>
+		<p>Replacement type:&nbsp;<a href="#" id="a_simple" class="active">Simple</a> / <a href="#" id="a_regex">RegEx</a> / <a href="#" id="a_swap">Swap</a></p>
+		<p>Letter case:&nbsp;<a href="#" id="a_maintain" class="active">Maintain</a> / <a href="#" id="a_override">Override</a></p>
+		<br>
+		<center><input type="button" value="Apply to selected" id="btn_applytoselected"></center><br>
+		<h1>Export / Import</h1><br>
+		<textarea id="textblob" spellcheck="false"></textarea><br><br>
+		<center><input type="button" value="Export" id="btn_export">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Import" id="btn_import"></center>
+	</div>
+	<script src="options.js"></script>
+</body>
+
+</html>

@@ -10,6 +10,7 @@
    "content_scripts": [ {
       "all_frames": true,
       "js": [ "jquery-2.1.4.min.js", "content_script.js" ],
+      "matches": ["*://csprod.dsc.umich.edu/*" ],
       "run_at": "document_end"
    } ],
    "icons": {
